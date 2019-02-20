@@ -1,0 +1,30 @@
+<ion-view view-title="Weight A Sec!">
+  <ion-content ng-controller="WeightController">
+    <p class="header-text">Enter Weight Information Below:</p>
+    <form name="weightForm" ng-submit="addWeight(weight,tWeight)">
+           <label class="item item-input">
+              <span class="input-label">Target Weight (lb)</span>
+              <input type="tel" placeholder="145" name="weightField" ng-model="tWeight" ng-pattern="/^(\d)+$/" required>
+           </label>
+           
+           <label class="item item-input">
+              <span class="input-label">Current Weight (lb)</span>
+              <input type="tel" placeholder="156" name="weightFieldTwo" ng-model="weight" ng-pattern="/^(\d)+$/"required>
+           </label>
+           
+           <div class="padding">
+              <span class="assertive" ng-show="weightForm.weightField.$error.required"><i class="assertive ion-ios-information "></i> Target weight is required</span>
+              <br>
+              <span class="assertive" ng-show="weightForm.weightField.$error.pattern"><i class="assertive ion-ios-information "></i> Only numbers are allowed for the target weight</span>
+              <br>
+             <span class="assertive" ng-show="weightForm.weightFieldTwo.$error.required"><i class="assertive ion-ios-information "></i> Current weight is required</span>
+                 <br>
+             <span class="assertive" ng-show="weightForm.weightFieldTwo.$error.pattern"><i class="assertive ion-ios-information "></i> Only numbers are allowed for the current weight</span>
+           
+           </div>
+            <button class="button button-block button-balanced" type="submit" ng-click="confirmSubmission()">
+              Submit
+            </button>
+    </form>
+  </ion-content>
+</ion-view>

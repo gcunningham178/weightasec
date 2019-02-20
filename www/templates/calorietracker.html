@@ -1,0 +1,31 @@
+<ion-view view-title="Weight A Sec!">
+  <ion-content ng-controller="CalorieController">
+    <p class="header-text">Enter Calorie Information Below:</p>
+    <form name="calorieForm" ng-submit="addCalories(cCalories,tCalories)">
+           <label class="item item-input">
+              <span class="input-label">Target Calories</span>
+              <input type="tel" placeholder="1800" name="calorieField" ng-model="tCalories" ng-pattern="/^(\d)+$/" required>
+           </label>
+           
+           <label class="item item-input">
+              <span class="input-label">Current Calories</span>
+              <input type="tel" placeholder="1560" name="calorieFieldTwo" ng-model="cCalories" ng-pattern="/^(\d)+$/" required>
+           </label>
+           
+           <div class="padding">
+             <span class="assertive" ng-show="calorieForm.calorieField.$error.required"><i class="assertive ion-ios-information "></i> Target calorie amount is required</span>
+              <br>
+              <span class="assertive" ng-show="calorieForm.calorieField.$error.pattern"><i class="assertive ion-ios-information "></i> Only numbers are allowed for the target calorie amount</span>
+           
+              <br>
+              <span class="assertive" ng-show="calorieForm.calorieFieldTwo.$error.required"><i class="assertive ion-ios-information "></i> Current calorie amount is required</span>
+              <br>
+              <span class="assertive" ng-show="calorieForm.calorieFieldTwo.$error.pattern"><i class="assertive ion-ios-information "></i> Only numbers are allowed for the current calorie amount</span>
+           
+           </div>
+            <button class="button button-block button-balanced" type="submit" ng-click="confirmSubmission()">
+              Submit
+            </button>
+    </form>
+  </ion-content>
+</ion-view>

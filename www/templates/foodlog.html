@@ -1,0 +1,45 @@
+<ion-view view-title="Weight A Sec!">
+  <ion-content ng-controller="FoodController">
+    <p class="header-text">Enter Food Information Below:</p>
+      <form name="foodForm" ng-submit="addFood(foodname, tCal, calFat)">
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">Food Name</span>
+              <input type="text" placeholder="Breakfast Wrap" name="foodField" ng-model="foodname" ng-pattern="/^(\D)+$/" required>
+            </label>
+
+           <label class="item item-input">
+              <span class="input-label">Total Calories</span>
+              <input type="tel" placeholder="340" name="foodFieldTwo" ng-model="tCal" ng-pattern="/^(\d)+$/"required>
+           </label>
+           
+           <label class="item item-input">
+              <span class="input-label">Calories from Fat</span>
+              <input type="tel" placeholder="97" name="foodFieldThree" ng-model="calFat" ng-pattern="/^(\d)+$/" required>
+           </label>
+           
+           <div class="padding">
+             <span class="assertive" ng-show="foodForm.foodField.$error.required"><i class="assertive ion-ios-information "></i> Food name is required</span>
+             <br>
+             <span class="assertive" ng-show="foodForm.foodField.$error.pattern"><i class="assertive ion-ios-information "></i> Only text is allowed for the food name</span>
+             <br>
+             <span class="assertive" ng-show="foodForm.foodFieldTwo.$error.required"><i class="assertive ion-ios-information "></i> Total calorie amount is required</span>
+             <br>
+             <span class="assertive" ng-show="foodForm.foodFieldTwo.$error.pattern"><i class="assertive ion-ios-information "></i> Only numbers are allowed for total calorie amount</span>
+             <br>
+             <span class="assertive" ng-show="foodForm.foodFieldThree.$error.required"><i class="assertive ion-ios-information "></i> Fat calorie amount is required</span>
+             <br>
+             <span class="assertive" ng-show="foodForm.foodFieldThree.$error.pattern"><i class="assertive ion-ios-information "></i> Only numbers are allowed for fat calorie amount</span>
+             <br>
+           </div>
+           
+           <div class="padding">
+                <button class="button button-block button-balanced" type="submit" ng-click="confirmSubmission()">
+                  Add New Food
+                </button>
+           </div>
+            
+      </form>
+</div>
+  </ion-content>
+</ion-view>

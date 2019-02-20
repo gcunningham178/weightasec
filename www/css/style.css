@@ -1,0 +1,14 @@
+/* Empty. Add your own CSS if you like */
+.main-navbar{
+  background-color: #4CAF50;
+  color: white;
+}
+
+.input-label, .header-text{
+  color: #1B5E20;
+}
+
+.header-text{
+  font-size: 18pt;
+  padding: 1em;
+}

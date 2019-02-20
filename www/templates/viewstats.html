@@ -1,0 +1,50 @@
+<ion-view cache-view="false" view-title="Weight A Sec!">
+  <ion-content ng-controller="ViewController">
+    <ion-list>
+      <h2 class="header-text">Favorite Food</h2>
+      <ion-item>
+        <div class="row">
+          <div class="col">Food Name</div>
+          <div class="col">Total Calories</div>
+          <div class="col">Calories From Fat</div>
+        </div>
+        <div class="row">
+          <div class="col">{{ foodName }}</div>
+          <div class="col">{{ tCal }}</div>
+          <div class="col">{{ calFat }}</div>
+        </div>
+        
+      </ion-item>
+      
+      <h2 class="header-text">Weight Information</h2>
+      <ion-item>
+        <div class="row">
+          <div class="col">Target Weight (lb)</div>
+          <div class="col">Current Weight (lb)</div>
+          <div class="col">Pounds Left (lb)</div>
+        </div>
+        <div class="row">
+          <div class="col">{{ tWeight }}</div>
+          <div class="col">{{ weight }}</div>
+          <div class="col">{{ weight - tWeight }}</div>
+        </div>
+        
+      </ion-item>
+      
+      <h2 class="header-text">Calorie Information</h2>
+      <ion-item>
+        <div class="row">
+          <div class="col">Target Calories</div>
+          <div class="col">Current Calories</div>
+          <div class="col">Calories Left</div>
+        </div>
+        <div class="row">
+          <div class="col">{{ tCalories }}</div>
+          <div class="col">{{ calories }}</div>
+          <div class="col">{{ tCalories - calories }}</div>
+        </div>
+        
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

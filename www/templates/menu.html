@@ -1,0 +1,41 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="main-navbar">
+      <ion-nav-back-button class="button-light">
+        <i class="md-arrow-round-back"></i>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-royal ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+      
+      <ion-nav-buttons side="right">
+        <a class="button button-icon button-royal ion-home" href="#/app/viewstats"></a>
+      </ion-nav-buttons>
+      
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close href="#/app/viewstats">
+          My Statistics
+        </ion-item>
+        
+        <ion-item menu-close href="#/app/calorietracker">
+          Calorie Tracker
+        </ion-item>
+        <ion-item menu-close href="#/app/weighttracker">
+          Weight Tracker
+        </ion-item>
+        <ion-item menu-close href="#/app/foodlog">
+          Favorite Food
+        </ion-item>
+        
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
